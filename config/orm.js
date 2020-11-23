@@ -1,15 +1,18 @@
-var connection = require("../config/connection.js");
+const connection = require ("./connection")
 
-function selectAll() {
-
-};
-
-function insertOne() {
-
-};
-
-function updateOne() {
-
+class orm {
+    constructor(connection) {
+        this.connection = connection
+    }
+    selectAll() {
+        return this.connection.query("SELECT * FROM burgers")
+    }
+    insertOne(burger, values) {
+        return this.connection.query(`INSERT INTO burgers (${burger}) VALUES (${values})`)
+    }
+    updateOne(column, id) {
+        return this.connection.query(`UPDATE burgers SET ${column} WHERE id = ${id}`)
+    }
 }
 
-module.exports = orm;
+module.exports = new orm(connection)
