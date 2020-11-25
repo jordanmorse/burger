@@ -10,4 +10,4 @@ To use this, ensure that node modules are installed specifically mySQL, express,
 
 Github repo: https://github.com/jordanmorse/burger
 
-Heroku deployment: 
+Heroku deployment: https://shielded-castle-44671.herokuapp.com/
